@@ -1,0 +1,7 @@
+typings
+de_modules
+package-lock.json
+test
+node_modues
+node_modues/*
+.swan

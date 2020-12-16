@@ -1,0 +1,137 @@
+.hide {
+    display: none;
+}
+
+.calendar {
+    display: block;
+    padding: 0 30.797rpx;
+}
+
+.calendar .header {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.calendar .header .opt-panel {
+    position: relative;
+    display: flex;
+    height: 105.07rpx;
+    font-size: 32.61rpx;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar .header .opt-panel::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: .604rpx;
+    background-color: #e6e6e6;
+    transform: scaleY(.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+}
+
+.calendar .header .opt-panel.android-patch::after {
+    background-color: #f5f5f5;
+    transform: unset;
+}
+
+.calendar .header .opt-panel .title {
+    font-weight: 700;
+    font-family: PingFangSC-Regular;
+}
+
+.calendar .header .opt-panel .text {
+    line-height: 1.2;
+}
+
+.calendar .header .opt-panel .prev,
+.calendar .header .opt-panel .next {
+    display: flex;
+    align-items: center;
+}
+
+.calendar .header .opt-panel .prev.btn-hover-feedback,
+.calendar .header .opt-panel .next.btn-hover-feedback {
+    opacity: .5;
+}
+
+.calendar .header .opt-panel .prev.disabled,
+.calendar .header .opt-panel .next.disabled {
+    opacity: 1;
+}
+
+.calendar .header .opt-panel .calendar-arrow {
+    display: flex;
+    width: 32.61rpx;
+    height: 32.61rpx;
+}
+
+.calendar .header .opt-panel .prev .calendar-arrow {
+    transform: rotateZ(180deg);
+}
+
+.calendar .header .week {
+    display: flex;
+    padding-top: 27.17rpx;
+    justify-content: flex-start;
+}
+
+.calendar .header .week-item {
+    display: flex;
+    width: 65.22rpx;
+    height: 65.22rpx;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    margin-right: 38.65rpx;
+    font-size: var(--font-size-md, 32.609rpx);
+}
+
+.calendar .header .week-item:last-child {
+    margin-right: 0;
+}
+
+
+
+.calendar .content {
+    display: flex;
+}
+
+.calendar .content .day-panel {
+    display: flex;
+    padding-bottom: 27.17rpx;
+    flex-flow: row wrap;
+}
+
+.calendar .content .day-panel .day-item {
+    display: flex;
+    width: 65.22rpx;
+    height: 65.22rpx;
+    margin-top: 38rpx;
+    margin-right: 38.65rpx;
+    font-size: var(--font-size-md, 32.609rpx);
+    align-items: center;
+    justify-content: center;
+    font-family: PingFangSC-Regular;
+}
+
+.calendar .content .day-panel .not-empty {
+    box-sizing: border-box;
+    border: 2rpx solid white;
+    border-radius: 50%;
+}
+
+.calendar .content .day-panel .day-item.row-last {
+    margin-right: 0;
+}
+
+.calendar .content .day-panel .day-item.selected {
+    color: var(--white, #fff);
+    border-radius: 50%;
+    background: #82aad5;
+}

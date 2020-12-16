@@ -1,0 +1,39 @@
+<view class="calendar">
+    <view class="header">
+        <view class="opt-panel" s-if="showOptionPanel">
+            <view class="prev {{monthIdx === 0 ? 'disabled' : ''}}" hover-class="btn-hover-feedback"
+                hover-stay-time="240" data-next="{{false}}" bindtap="monthClk">
+                <view class="calendar-arrow prev"></view>
+                <view class="text">上个月</view>
+            </view>
+            <view class="title">{{fmtedMonths[monthIdx].title}}</view>
+            <view class="next {{monthIdx === range.length - 1 ? 'disabled' : ''}}" hover-class="btn-hover-feedback"
+                hover-stay-time="240" data-next="{{true}}" bindtap="monthClk">
+                <view class="text">下个月</view>
+                <view class="calendar-arrow next"></view>
+            </view>
+        </view>
+        <view class="week" style="{{!showOptionPanel ? 'padding: 0;' : ''}}">
+            <view s-for="weekDay, i in weekText"
+                class="week-item {{!i ? 'first' : ''}} {{i === weekText.length - 1 ? 'last' : ''}}">
+                {{weekDay}}
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="day-panel" s-for="item, idx in fmtedMonths">
+            <template s-if="monthIdx === idx">
+                <view s-for="dayItem, i in item.value" offset="{{item.offset}}" state="{{range[monthIdx].value[i - item.offset].state }}" val="{{range[monthIdx].value}}"
+                    disabled="{{!range[monthIdx].value[i - item.offset].state}}" class="
+                    day-item
+                    {{!range[monthIdx].value[i - item.offset].state ? 'gray' : ''}}
+                    {{currentValue.day != nviewl && currentValue.day === dayItem.value ? 'selected' : ''}}
+                    {{i === 0 && (i + 1) % 8 === 0 ? 'row-first' : ''}}
+                    {{i !== 0 && (i + 1) % 7 === 0 ? 'row-last' : ''}}
+                    {{range[monthIdx].value[i - item.offset].state === 0 ? 'not-empty' : 'empty' }}
+                " data-value="{{range[monthIdx].value[i - item.offset]}}" bindtap="dayClk">
+                    {{today === dayItem.value ? '今' : dayItem.day}}
+                </view>
+            </template>
+        </view>
+    </view>

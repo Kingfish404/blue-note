@@ -1,0 +1,226 @@
+/**
+ * @file index.css
+ * @author jinyu
+ */
+
+ .swan-web-view{
+     background-color: black;
+ }
+
+.dateSelect,
+.note,
+.msg,
+.me {
+    display: none;
+}
+
+.wheather {
+    font-size: larger;
+    position: absolute;
+    color: white;
+    top: 2.5em;
+    left: 1em;
+}
+
+.tips {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0.5em;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    line-height:50px;
+    bottom: 10px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    background-color: #6d89a8;
+}
+
+.headerItem {
+    width: 33.3333%;
+    height: 100%;
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 0%;
+    line-height: 50px;
+    box-shadow: 0 0 2px 0 rgba(77, 72, 72, 0.30);
+}
+
+.headerItem:hover {
+    background-color: #82aad5;
+}
+
+.submit {
+    margin: 0.1em 0;
+}
+
+/* Clander */
+.dateSelect .wrap{
+    color: white;
+    font-weight: bold;
+}
+
+.newNoteBtn{
+    width:120px;
+    height: 50px;
+    line-height:50px;
+    text-align:center;
+    margin:auto;
+    position: absolute;
+    bottom: 90px;
+    right: 1em;
+    background-color: #82aad5;
+    color:white;
+    border:none;
+    outline: none;
+    border-radius: 0.5em;
+}
+
+/* NOTE */
+.note {
+    max-width: 100%;
+    position: absolute;
+    top: 4em;
+}
+
+.noteTitle {
+    margin: 1em auto;
+    font-size: larger;
+    color: white;
+}
+
+.noteDelBtn{
+    float: right;
+    user-select: none;
+}
+
+.netRankMsg{
+    display:inline;
+}
+
+.note textarea {
+    width: 625rpx;
+    min-height: 600rpx;
+    padding: 10px;
+    line-height: 1.5;
+    color:black;
+    background-color: white;
+    margin: auto;
+    box-shadow: 1px 1px 1px #999;
+    background-color: #EAEFF6;
+    border-radius: 0.5em;
+}
+
+.note button{
+    width:120px;
+    height: 50px;
+    line-height:50px;
+    text-align:center;
+    color: white;
+    background-color: #82aad5;
+    float: right;
+    border-radius: 0.5em;
+    margin:auto;
+    border:none;
+    box-shadow: 0 0 2px 1px rgba(77, 72, 72, 0.30);
+}
+
+/* MSG */
+.msg {
+    position: absolute;
+    max-height: 100%;
+    text-align: center;
+    overflow: auto;
+    top: 7em;
+}
+
+.msg .msg-date {
+    float: left;
+    line-height: 24px;
+    width: 200rpx;
+}
+
+.msg .msg-desc {
+    float: right;
+    width: 8em;
+    margin: auto 1em auto 0;
+    line-height: 24px;
+    overflow: auto;
+}
+
+.msg .msg-rank{
+    float: right;
+    line-height: 24px;
+}
+
+.msg  .msg_tiem {
+    width: 90vw;
+    background-color: #82aad5;
+    margin: 1em 1em;
+    color: white;
+    padding: 4vw;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center bottom;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 0 20px 0px rgba(77, 72, 72, 0.30);
+    border-radius: 0.5em;
+}
+
+
+/* ME */
+.meCard {
+    width: 90%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 7em;
+    left: 0;
+    text-align: center;
+    background-color: #82aad5;
+    box-shadow: 0 0 20px 0px rgba(77, 72, 72, 0.30);
+    border-radius: 0.5em;
+    margin: 1em 5%;
+    padding: 1em auto;
+}
+
+.titleMsg {
+    position: relative;
+    font-size:larger;
+    width: 82vw;
+    color: white;
+}
+
+.meCard button{
+    background-color: #61a4ec;
+    box-shadow: 0 0 4px 0px rgba(77, 72, 72, 0.30);
+}
+
+.meCard_h1 {
+    font-size: var(--font-size-lg, 5vw);
+    line-height: 5vw;
+    margin: 10% auto;
+    font-weight: 700;
+}
+
+.meCard_info {
+    margin-bottom: 2vw;
+}
+
+.meCard_info-item {
+    align-items: top;
+    margin: 2em;
+}
+
+.loginBtn {
+    margin: 10% auto;
+    display: block;
+}

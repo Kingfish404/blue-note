@@ -1,0 +1,90 @@
+<!-- index.swan -->
+<view class="container">
+    <!-- 切换栏目 -->
+    <view bindtap="getWheather" class="wheather">
+        <text>今日 {{ wheather }}</text>
+    </view>
+
+    <!-- 日历 -->
+    <view class="content">
+        <view class="dateSelect" style="display:{{dateDisplay}}">
+            <view class="wrap">
+                <view class="card-panel">
+                    <view class="comp-wrap">
+                        <calendar class="calendar" range="{{range}}" value="{{allDayValue}}"
+                            bind:dayclick="allDayClick">
+                        </calendar>
+                    </view>
+                </view>
+            </view>
+            <view class="tips">可直接点击日期新建</view>
+            <button bind:tap="todayClick" class="newNoteBtn" data-value="{{allDayValue}}">新建</button>
+        </view>
+    </view>
+
+    <!-- 文本编辑区 -->
+    <view class="note" style="display:{{noteDisplay}}">
+        <view class="noteTitle">
+            <text>{{ currentDate }}</text>
+            <text bind:tap="delNote" class="noteDelBtn">删除</text>
+        </view>
+        <textarea auto-focus="true" bindinput="autoSave" class="mainNote" maxlength="-1"
+            show-confirm-bar="submit" value="{= currentNoteValue =}" />
+        <smt-rate stars="{{ currentRank }}"
+                bind:change="rankChange"
+                active-color="#94bbe6"
+                tipTextColor="white"
+                ></smt-rate>
+        <button bind:tap="submit" class="submit">完成</button>
+    </view>
+
+    <!-- 历史记录 -->
+    <view class="msg" style="display:{{msgDisplay}}">
+        <view  bind:tap="onTap" >
+            <view s-if="isEmpty" class="tips" bind:tap="startNote">在日历新建</view>
+            </view>
+            <view s-for='item,item_index in noteDateList trackBy'>
+                <view class="msg_tiem" data-date='{"day":"{{ item }}","state":1}' bindtap='getNote'>
+                <view class="msg-date">{{ item }}</view>
+                <view class="msg-rank">{{ noteRankList[item_index] }}</view>
+                <view class="msg-desc">{{ noteDescribeList[item_index] }}</view>
+                </view>
+            </view>
+    </view>
+
+    <!-- 个人页面 -->
+    <view style="display:{{meDisplay}}">
+        <view class="titleMsg">
+                <view>每日一语：</view>
+                <text>{{ oneWord }}</text>
+            </view>
+        <view  class="meCard">
+            <view class="meCard_h1">{{ userInfo.nickName }}</view>
+                <view class="meCard_info">
+                    <view class="meCard_info-item" s-if='isLogin'>
+                    <text>每天都要多喝水</text>
+                    </view>
+                <view class="meCard_info-item" s-else>
+                <view>
+                    <text class="meCard_h1">欢迎使用
+                    </text>
+                </view>
+                <view class="loginBtn" s-if='!isLogin'>
+                    <button type="primary" class="middle-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                        使用平台账号登陆
+                    </button>
+                </view>
+            </view>
+            <text bindtap="aboutUs" class="aboutUs">关于我们</text>
+        </view>
+    </view>
+    </view>
+
+    <view bind:tap="onTap" class="header" adjust-position="false">
+        <view bind:tap="startNote" class="headerItem">日历</view>
+        <view bind:tap="startNotice" class="headerItem">
+            <text>历史</text>
+        </view>
+        <view bind:tap="startMe" class="headerItem" bindmyevent="pageEventListener">我的</view>
+    </view>
+</view>

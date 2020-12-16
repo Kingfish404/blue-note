@@ -1,0 +1,34 @@
+/**
+ * @file app.css
+ * @author jinyu
+ */
+page{
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-size: 145% 130%;
+    background-repeat: no-repeat;
+    background-image: url('./static/images/bgc.jpg');
+    background-position: 0% 0%;
+    background-attachment: fixed;
+    position: absolute;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+    background-color: #325986;
+}
+
+/* change default ui style */
+.swan-dialog-ctn .swan-dialog-content .swan-dialog-content-wrap
+{
+    min-height: 200px;
+    white-space: pre-wrap;
+    text-align: center;
+    user-select: all;
+}

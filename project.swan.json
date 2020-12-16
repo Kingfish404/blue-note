@@ -1,0 +1,25 @@
+{
+    "appid": "23053268",
+    "compilation-args": {
+        "common": {
+            "enhance": true
+        }
+    },
+    "host": "baiduboxapp",
+    "preview": {
+        "packageId": 734408
+    },
+    "projectname": "小蓝便笺",
+    "publish": {
+        "version": "0.5.2"
+    },
+    "setting": {
+        "urlCheck": false
+    },
+    "swan": {
+        "baiduboxapp": {
+            "extensionJsVersion": "1.15.3",
+            "swanJsVersion": "3.200.116"
+        }
+    }
+}
