@@ -11,7 +11,7 @@
             <view class="wrap">
                 <view class="card-panel">
                     <view class="comp-wrap">
-                        <calendar class="calendar" range="{{range}}" value="{{allDayValue}}"
+                        <calendar class="calendar" range="{{rangeP}}" value="{{allDayValue}}"
                             bind:dayclick="allDayClick">
                         </calendar>
                     </view>

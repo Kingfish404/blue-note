@@ -2,7 +2,10 @@
  * @file calendar.js
  * @author huangzilong (huangzilong@baidu.com)
  */
-import {getDay, getMonth} from './util';
+import {
+    getDay,
+    getMonth
+} from './util';
 
 Component({ // eslint-disable-line
     properties: {
@@ -64,6 +67,12 @@ Component({ // eslint-disable-line
         }
         /* eslint-enable fecs-properties-quore */
     },
+    observers: {
+        'range': function (e) {
+            console.log("update range and fmtedMonth - on calendar.js")
+            this.fmtedMonth();
+        }
+    },
     data: {
         currentValue: '',
         // yyyy-mm-dd
@@ -86,12 +95,20 @@ Component({ // eslint-disable-line
          * 格式化月份
          */
         fmtedMonth() {
-            const {range, separation} = this.data;
+            const {
+                range,
+                separation
+            } = this.data;
 
-            const result = range.map(({name, value}) => {
+            const result = range.map(({
+                name,
+                value
+            }) => {
                 const [y, m] = name.split(separation);
                 // 渲染后端返回的总天数
-                const days = Array.from({length: value.length}, (_, i) => i + 1);
+                const days = Array.from({
+                    length: value.length
+                }, (_, i) => i + 1);
                 const n = new Date(y, m - 1, 1).getDay();
                 days.unshift(...new Array(n).fill(null));
                 const r = [];
@@ -101,13 +118,19 @@ Component({ // eslint-disable-line
                     const item = e && {
                         value: [
                             y, m, day > 9 && day || '0' + day
-                        ].join(separation), day
+                        ].join(separation),
+                        day
                     };
                     item && day++;
                     r.push(item);
                 });
 
-                return {name, title: `${y}年${+m}月`, value: r, offset: n};
+                return {
+                    name,
+                    title: `${y}年${+m}月`,
+                    value: r,
+                    offset: n
+                };
             });
 
             this.setData({
@@ -122,7 +145,10 @@ Component({ // eslint-disable-line
          */
         monthClk(e) {
             let next = e.currentTarget.dataset.next;
-            let {range, monthIdx} = this.data;
+            let {
+                range,
+                monthIdx
+            } = this.data;
 
             next && monthIdx < range.length - 1 && monthIdx++;
             !next && monthIdx > 0 && monthIdx--;
@@ -138,7 +164,10 @@ Component({ // eslint-disable-line
          * @param {object} value 月份对象
          */
         getMonthIdx(value = this.data.value) {
-            const {range, separation} = this.data;
+            const {
+                range,
+                separation
+            } = this.data;
             const ym = (value && value.day || getMonth()).split(separation).slice(0, 2).join('-');
             return range.map(e => e.name).indexOf(ym);
         },
@@ -152,7 +181,10 @@ Component({ // eslint-disable-line
             let value = e.currentTarget.dataset.value;
             let disabled = this.data.disabled;
 
-            this.triggerEvent('dayclick', {value, disabled});
+            this.triggerEvent('dayclick', {
+                value,
+                disabled
+            });
             if (!disabled && value.state) {
                 if (this.data.value !== value) {
                     return this.triggerEvent('change', value);
@@ -164,12 +196,17 @@ Component({ // eslint-disable-line
          * 校验日历状态
          */
         checkForbidVal() {
-            let {range, value} = this.data;
+            let {
+                range,
+                value
+            } = this.data;
 
             const monthIdx = this.getMonthIdx();
             const dates = range[monthIdx] && range[monthIdx].value;
             if (Array.isArray(dates) && dates.length) {
-                const dayIdx = dates.map(({day}) => day).indexOf(value.day);
+                const dayIdx = dates.map(({
+                    day
+                }) => day).indexOf(value.day);
                 if (dayIdx > -1) {
                     const state = dates[dayIdx].state;
                     if (!state) {

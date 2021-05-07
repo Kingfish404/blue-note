@@ -11,15 +11,17 @@
     },
     "projectname": "小蓝便笺",
     "publish": {
-        "version": "0.5.2"
+        "hideTips": true,
+        "tips": [],
+        "version": "0.5.4"
     },
     "setting": {
         "urlCheck": false
     },
     "swan": {
         "baiduboxapp": {
-            "extensionJsVersion": "1.15.3",
-            "swanJsVersion": "3.200.116"
+            "swanJsVersion": "3.200.116",
+            "extensionJsVersion": "1.15.3"
         }
     }
 }

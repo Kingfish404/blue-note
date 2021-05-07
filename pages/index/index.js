@@ -32,753 +32,7 @@ Page({
         canIUse: swan.canIUse('button.open-type.getUserInfo'),
         nowState: -1, // -1为均无,0为Note，1为历史，2为我的
         lastState: -1, // 上一个状态
-        range: [{
-            name: '2020-10',
-            value: [{
-                    day: '2020-10-01',
-                    state: 1
-                },
-                {
-                    day: '2020-10-02',
-                    state: 1
-                },
-                {
-                    day: '2020-10-03',
-                    state: 1
-                },
-                {
-                    day: '2020-10-04',
-                    state: 1
-                },
-                {
-                    day: '2020-10-05',
-                    state: 1
-                },
-                {
-                    day: '2020-10-06',
-                    state: 1
-                },
-                {
-                    day: '2020-10-10',
-                    state: 1
-                },
-                {
-                    day: '2020-10-08',
-                    state: 1
-                },
-                {
-                    day: '2020-10-09',
-                    state: 1
-                },
-                {
-                    day: '2020-10-10',
-                    state: 1
-                },
-                {
-                    day: '2020-10-11',
-                    state: 1
-                },
-                {
-                    day: '2020-10-12',
-                    state: 1
-                },
-                {
-                    day: '2020-10-13',
-                    state: 1
-                },
-                {
-                    day: '2020-10-14',
-                    state: 1
-                },
-                {
-                    day: '2020-10-15',
-                    state: 1
-                },
-                {
-                    day: '2020-10-16',
-                    state: 1
-                },
-                {
-                    day: '2020-10-17',
-                    state: 1
-                },
-                {
-                    day: '2020-10-18',
-                    state: 1
-                },
-                {
-                    day: '2020-10-19',
-                    state: 1
-                },
-                {
-                    day: '2020-10-20',
-                    state: 1
-                },
-                {
-                    day: '2020-10-21',
-                    state: 1
-                },
-                {
-                    day: '2020-10-22',
-                    state: 1
-                },
-                {
-                    day: '2020-10-23',
-                    state: 1
-                },
-                {
-                    day: '2020-10-24',
-                    state: 1
-                },
-                {
-                    day: '2020-10-25',
-                    state: 1
-                },
-                {
-                    day: '2020-10-26',
-                    state: 1
-                },
-                {
-                    day: '2020-10-27',
-                    state: 1
-                },
-                {
-                    day: '2020-10-28',
-                    state: 1
-                },
-                {
-                    day: '2020-10-29',
-                    state: 1
-                },
-                {
-                    day: '2020-10-30',
-                    state: 1
-                },
-                {
-                    day: '2020-10-31',
-                    state: 1
-                }
-            ]
-        }, {
-            name: '2020-11',
-            value: [{
-                    day: '2020-11-01',
-                    state: 1
-                },
-                {
-                    day: '2020-11-02',
-                    state: 1
-                },
-                {
-                    day: '2020-11-03',
-                    state: 1
-                },
-                {
-                    day: '2020-11-04',
-                    state: 1
-                },
-                {
-                    day: '2020-11-05',
-                    state: 1
-                },
-                {
-                    day: '2020-11-06',
-                    state: 1
-                },
-                {
-                    day: '2020-11-07',
-                    state: 1
-                },
-                {
-                    day: '2020-10-08',
-                    state: 1
-                },
-                {
-                    day: '2020-11-09',
-                    state: 1
-                },
-                {
-                    day: '2020-11-10',
-                    state: 1
-                },
-                {
-                    day: '2020-11-11',
-                    state: 1
-                },
-                {
-                    day: '2020-11-12',
-                    state: 1
-                },
-                {
-                    day: '2020-11-13',
-                    state: 1
-                },
-                {
-                    day: '2020-11-14',
-                    state: 1
-                },
-                {
-                    day: '2020-11-15',
-                    state: 1
-                },
-                {
-                    day: '2020-11-16',
-                    state: 1
-                },
-                {
-                    day: '2020-11-17',
-                    state: 1
-                },
-                {
-                    day: '2020-11-18',
-                    state: 1
-                },
-                {
-                    day: '2020-11-19',
-                    state: 1
-                },
-                {
-                    day: '2020-11-20',
-                    state: 1
-                },
-                {
-                    day: '2020-11-21',
-                    state: 1
-                },
-                {
-                    day: '2020-11-22',
-                    state: 1
-                },
-                {
-                    day: '2020-11-23',
-                    state: 1
-                },
-                {
-                    day: '2020-11-24',
-                    state: 1
-                },
-                {
-                    day: '2020-11-25',
-                    state: 1
-                },
-                {
-                    day: '2020-11-26',
-                    state: 1
-                },
-                {
-                    day: '2020-11-27',
-                    state: 1
-                },
-                {
-                    day: '2020-11-28',
-                    state: 1
-                },
-                {
-                    day: '2020-11-29',
-                    state: 1
-                },
-                {
-                    day: '2020-11-30',
-                    state: 1
-                }
-            ]
-        }, {
-            name: '2020-12',
-            value: [{
-                    day: '2020-12-01',
-                    state: 1
-                },
-                {
-                    day: '2020-12-02',
-                    state: 1
-                },
-                {
-                    day: '2020-12-03',
-                    state: 1
-                },
-                {
-                    day: '2020-12-04',
-                    state: 1
-                },
-                {
-                    day: '2020-12-05',
-                    state: 1
-                },
-                {
-                    day: '2020-12-06',
-                    state: 1
-                },
-                {
-                    day: '2020-12-07',
-                    state: 1
-                },
-                {
-                    day: '2020-12-08',
-                    state: 1
-                },
-                {
-                    day: '2020-12-09',
-                    state: 1
-                },
-                {
-                    day: '2020-12-10',
-                    state: 1
-                },
-                {
-                    day: '2020-12-11',
-                    state: 1
-                },
-                {
-                    day: '2020-12-12',
-                    state: 1
-                },
-                {
-                    day: '2020-12-13',
-                    state: 1
-                },
-                {
-                    day: '2020-12-14',
-                    state: 1
-                },
-                {
-                    day: '2020-12-15',
-                    state: 1
-                },
-                {
-                    day: '2020-12-16',
-                    state: 1
-                },
-                {
-                    day: '2020-12-17',
-                    state: 1
-                },
-                {
-                    day: '2020-12-18',
-                    state: 1
-                },
-                {
-                    day: '2020-12-19',
-                    state: 1
-                },
-                {
-                    day: '2020-12-20',
-                    state: 1
-                },
-                {
-                    day: '2020-12-21',
-                    state: 1
-                },
-                {
-                    day: '2020-12-22',
-                    state: 1
-                },
-                {
-                    day: '2020-12-23',
-                    state: 1
-                },
-                {
-                    day: '2020-12-24',
-                    state: 1
-                },
-                {
-                    day: '2020-12-25',
-                    state: 1
-                },
-                {
-                    day: '2020-12-26',
-                    state: 1
-                },
-                {
-                    day: '2020-12-27',
-                    state: 1
-                },
-                {
-                    day: '2020-12-28',
-                    state: 1
-                },
-                {
-                    day: '2020-12-29',
-                    state: 1
-                },
-                {
-                    day: '2020-12-30',
-                    state: 1
-                },
-                {
-                    day: '2020-12-31',
-                    state: 1
-                }
-            ]
-        }, {
-            name: '2021-1',
-            value: [{
-                    day: '2021-1-01',
-                    state: 1
-                },
-                {
-                    day: '2021-1-02',
-                    state: 1
-                },
-                {
-                    day: '2021-1-03',
-                    state: 1
-                },
-                {
-                    day: '2021-1-04',
-                    state: 1
-                },
-                {
-                    day: '2021-1-05',
-                    state: 1
-                },
-                {
-                    day: '2021-1-06',
-                    state: 1
-                },
-                {
-                    day: '2021-1-07',
-                    state: 1
-                },
-                {
-                    day: '2021-1-08',
-                    state: 1
-                },
-                {
-                    day: '2021-1-09',
-                    state: 1
-                },
-                {
-                    day: '2021-1-10',
-                    state: 1
-                },
-                {
-                    day: '2021-1-11',
-                    state: 1
-                },
-                {
-                    day: '2021-1-1',
-                    state: 1
-                },
-                {
-                    day: '2021-1-13',
-                    state: 1
-                },
-                {
-                    day: '2021-1-14',
-                    state: 1
-                },
-                {
-                    day: '2021-1-15',
-                    state: 1
-                },
-                {
-                    day: '2021-1-16',
-                    state: 1
-                },
-                {
-                    day: '2021-1-17',
-                    state: 1
-                },
-                {
-                    day: '2021-1-18',
-                    state: 1
-                },
-                {
-                    day: '2021-1-19',
-                    state: 1
-                },
-                {
-                    day: '2021-1-20',
-                    state: 1
-                },
-                {
-                    day: '2021-1-21',
-                    state: 1
-                },
-                {
-                    day: '2021-1-22',
-                    state: 1
-                },
-                {
-                    day: '2021-1-23',
-                    state: 1
-                },
-                {
-                    day: '2021-1-24',
-                    state: 1
-                },
-                {
-                    day: '2021-1-25',
-                    state: 1
-                },
-                {
-                    day: '2021-1-26',
-                    state: 1
-                },
-                {
-                    day: '2021-1-27',
-                    state: 1
-                },
-                {
-                    day: '2021-1-28',
-                    state: 1
-                },
-                {
-                    day: '2021-1-29',
-                    state: 1
-                },
-                {
-                    day: '2021-1-30',
-                    state: 1
-                },
-                {
-                    day: '2021-1-31',
-                    state: 1
-                }
-            ]
-        }, {
-            name: '2021-2',
-            value: [{
-                    day: '2021-2-01',
-                    state: 1
-                },
-                {
-                    day: '2021-2-02',
-                    state: 1
-                },
-                {
-                    day: '2021-2-03',
-                    state: 1
-                },
-                {
-                    day: '2021-2-04',
-                    state: 1
-                },
-                {
-                    day: '2021-2-05',
-                    state: 1
-                },
-                {
-                    day: '2021-2-06',
-                    state: 1
-                },
-                {
-                    day: '2021-2-07',
-                    state: 1
-                },
-                {
-                    day: '2021-2-08',
-                    state: 1
-                },
-                {
-                    day: '2021-2-09',
-                    state: 1
-                },
-                {
-                    day: '2021-2-10',
-                    state: 1
-                },
-                {
-                    day: '2021-2-11',
-                    state: 1
-                },
-                {
-                    day: '2021-2-1',
-                    state: 1
-                },
-                {
-                    day: '2021-2-13',
-                    state: 1
-                },
-                {
-                    day: '2021-2-14',
-                    state: 1
-                },
-                {
-                    day: '2021-2-15',
-                    state: 1
-                },
-                {
-                    day: '2021-2-16',
-                    state: 1
-                },
-                {
-                    day: '2021-2-17',
-                    state: 1
-                },
-                {
-                    day: '2021-2-18',
-                    state: 1
-                },
-                {
-                    day: '2021-2-19',
-                    state: 1
-                },
-                {
-                    day: '2021-2-20',
-                    state: 1
-                },
-                {
-                    day: '2021-2-21',
-                    state: 1
-                },
-                {
-                    day: '2021-2-22',
-                    state: 1
-                },
-                {
-                    day: '2021-2-23',
-                    state: 1
-                },
-                {
-                    day: '2021-2-24',
-                    state: 1
-                },
-                {
-                    day: '2021-2-25',
-                    state: 1
-                },
-                {
-                    day: '2021-2-26',
-                    state: 1
-                },
-                {
-                    day: '2021-2-27',
-                    state: 1
-                },
-                {
-                    day: '2021-2-28',
-                    state: 1
-                }
-            ]
-        }, {
-            name: '2021-3',
-            value: [{
-                    day: '2021-3-01',
-                    state: 1
-                },
-                {
-                    day: '2021-3-02',
-                    state: 1
-                },
-                {
-                    day: '2021-3-03',
-                    state: 1
-                },
-                {
-                    day: '2021-3-04',
-                    state: 1
-                },
-                {
-                    day: '2021-3-05',
-                    state: 1
-                },
-                {
-                    day: '2021-3-06',
-                    state: 1
-                },
-                {
-                    day: '2021-3-07',
-                    state: 1
-                },
-                {
-                    day: '2021-3-08',
-                    state: 1
-                },
-                {
-                    day: '2021-3-09',
-                    state: 1
-                },
-                {
-                    day: '2021-3-10',
-                    state: 1
-                },
-                {
-                    day: '2021-3-11',
-                    state: 1
-                },
-                {
-                    day: '2021-3-1',
-                    state: 1
-                },
-                {
-                    day: '2021-3-13',
-                    state: 1
-                },
-                {
-                    day: '2021-3-14',
-                    state: 1
-                },
-                {
-                    day: '2021-3-15',
-                    state: 1
-                },
-                {
-                    day: '2021-3-16',
-                    state: 1
-                },
-                {
-                    day: '2021-3-17',
-                    state: 1
-                },
-                {
-                    day: '2021-3-18',
-                    state: 1
-                },
-                {
-                    day: '2021-3-19',
-                    state: 1
-                },
-                {
-                    day: '2021-3-20',
-                    state: 1
-                },
-                {
-                    day: '2021-3-21',
-                    state: 1
-                },
-                {
-                    day: '2021-3-22',
-                    state: 1
-                },
-                {
-                    day: '2021-3-23',
-                    state: 1
-                },
-                {
-                    day: '2021-3-24',
-                    state: 1
-                },
-                {
-                    day: '2021-3-25',
-                    state: 1
-                },
-                {
-                    day: '2021-3-26',
-                    state: 1
-                },
-                {
-                    day: '2021-3-27',
-                    state: 1
-                },
-                {
-                    day: '2021-3-28',
-                    state: 1
-                },
-                {
-                    day: '2021-3-29',
-                    state: 1
-                },
-                {
-                    day: '2021-3-30',
-                    state: 1
-                },
-                {
-                    day: '2021-3-31',
-                    state: 1
-                }
-            ]
-        }],
+        rangeP: [],
         value: {},
         allDayValue: {},
         allDayValid: true,
@@ -800,14 +54,45 @@ Page({
         var t_currentDay = String(Y + '-' + M + '-' + D);
 
         // console.log(t_currentDay);
-        // console.log(utils.getMonthsDay())
+
+        let rangeP = [];
+        for (let i = 2021; i <= Y; ++i) {
+            for (let j = 1;
+                (i < Y && j <= 12) || (j <= M); ++j) {
+                let month_name = String(i) + '-' + (j < 10 ? '0' + String(j) : String(j));
+                let month_value = new Array(30).fill(0).map((_, index) => {
+                    return {
+                        day: month_name + '-' + (index + 1),
+                        state: 1
+                    }
+                });
+                if (j & 1) {
+                    month_value.push({
+                        day: 31,
+                        state: 1
+                    });
+                } else {
+                    if (j == 2) {
+                        month_value.pop();
+                        if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {} else {
+                            month_value.pop();
+                        }
+                    }
+                    // console.log(month_value);
+                }
+                rangeP.push({
+                    name: month_name,
+                    value: month_value
+                })
+            }
+        }
 
         this.setData({
-            range: this.data.range,
             allDayValue: {
                 day: t_currentDay,
                 state: 1
-            }
+            },
+            rangeP
         });
         this.switchTab(this.nowState = this.data.nowState);
     },
@@ -816,6 +101,7 @@ Page({
         if (this.removeSkeleton && this.removeSkeleton()) {
             console.log("onReady - 移除skeleton success");
         }
+
         // 读取Note列表数据
         swan.getStorage({
             key: 'noteDateList',
@@ -947,19 +233,18 @@ Page({
     //  更新日历
     async updateDate() {
         // 标记所有已经保存了的Note，修改range中的state为0
-        for (var i = 0; i < this.data.range.length; i++) {
+        for (var i = 0; i < this.data.rangeP.length; i++) {
 
-            for (var key in this.data.range[i].value) {
-                if (this.data.noteDateList.indexOf(this.data.range[i].value[key].day) != -1) {
-                    this.data.range[i].value[key].state = 0;
-                }else
-                {
-                    this.data.range[i].value[key].state = 1;
+            for (var key in this.data.rangeP[i].value) {
+                if (this.data.noteDateList.indexOf(this.data.rangeP[i].value[key].day) != -1) {
+                    this.data.rangeP[i].value[key].state = 0;
+                } else {
+                    this.data.rangeP[i].value[key].state = 1;
                 }
             }
         }
         this.setData({
-            range: this.data.range
+            rangeP: this.data.rangeP
         })
     },
     // 获取天气
@@ -981,7 +266,7 @@ Page({
                 swan.request({
                     url: urlMsg,
                     success: (res) => {
-                        console.log(res.data.now)
+                        // console.log(res.data.now)
                         var wheatherNow = res.data.now;
                         this.setData({
                             wheather: String(wheatherNow.text + '   ' + wheatherNow.temp + '℃')
@@ -1057,15 +342,13 @@ Page({
             });
             this.data.noteDateList.splice(this.data.noteDateList.indexOf(this.data.currentDate), 1);
             this.data.noteRankList.splice(this.data.noteDateList.indexOf(this.data.currentDate), 1);
-            if(this.data.noteDateList.length==0)
-            {
+            if (this.data.noteDateList.length == 0) {
                 this.data.isEmpty = true;
             }
         }
-        if(this.data.noteDateList.length==0)
-        {
+        if (this.data.noteDateList.length == 0) {
             this.data.isEmpty = true;
-        }else{
+        } else {
             this.data.isEmpty = false;
         }
         this.setData({
@@ -1074,7 +357,7 @@ Page({
             noteRankList: this.data.noteRankList,
             currentNoteValue: '',
             currentRank: 3,
-            isEmpty:this.data.isEmpty
+            isEmpty: this.data.isEmpty
         })
 
         // 保存日期列表
@@ -1193,7 +476,7 @@ Page({
     aboutUs() {
         swan.showModal({
             title: '关于我们',
-            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:0.5.2\r\ncopyright@2020\r\n反馈群：631586660',
+            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:0.5.3\r\ncopyright@2020\r\n反馈群：631586660',
             showCancel: false,
             confirmText: '知道啦'
         });
