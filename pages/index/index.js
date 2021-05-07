@@ -476,7 +476,7 @@ Page({
     aboutUs() {
         swan.showModal({
             title: '关于我们',
-            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:0.5.3\r\ncopyright@2020\r\n反馈群：631586660',
+            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:1.0.0\r\ncopyright@2020\r\n反馈群：631586660',
             showCancel: false,
             confirmText: '知道啦'
         });
