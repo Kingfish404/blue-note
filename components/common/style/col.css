@@ -1,0 +1,100 @@
+.s-col {
+    float: left;
+    box-sizing: border-box;
+}
+
+.s-col--1 {
+    width: calc(100% / (24 / 1));
+}
+
+.s-col--2 {
+    width: calc(100% / (24 / 2));
+}
+
+.s-col--3 {
+    width: calc(100% / (24 / 3));
+}
+
+.s-col--4 {
+    width: calc(100% / (24 / 4));
+}
+
+.s-col--5 {
+    width: calc(100% / (24 / 5));
+}
+
+.s-col--6 {
+    width: calc(100% / (24 / 6));
+}
+
+.s-col--7 {
+    width: calc(100% / (24 / 7));
+}
+
+.s-col--8 {
+    width: calc(100% / (24 / 8));
+}
+
+.s-col--9 {
+    width: calc(100% / (24 / 9));
+}
+
+.s-col--10 {
+    width: calc(100% / (24 / 10));
+}
+
+.s-col--11 {
+    width: calc(100% / (24 / 11));
+}
+
+.s-col--12 {
+    width: calc(100% / (24 / 12));
+}
+
+.s-col--13 {
+    width: calc(100% / (24 / 13));
+}
+
+.s-col--14 {
+    width: calc(100% / (24 / 14));
+}
+
+.s-col--15 {
+    width: calc(100% / (24 / 15));
+}
+
+.s-col--16 {
+    width: calc(100% / (24 / 16));
+}
+
+.s-col--17 {
+    width: calc(100% / (24 / 17));
+}
+
+.s-col--18 {
+    width: calc(100% / (24 / 18));
+}
+
+.s-col--19 {
+    width: calc(100% / (24 / 19));
+}
+
+.s-col--20 {
+    width: calc(100% / (24 / 20));
+}
+
+.s-col--21 {
+    width: calc(100% / (24 / 21));
+}
+
+.s-col--22 {
+    width: calc(100% / (24 / 22));
+}
+
+.s-col--23 {
+    width: calc(100% / (24 / 23));
+}
+
+.s-col--24 {
+    width: calc(100% / (24 / 24));
+}

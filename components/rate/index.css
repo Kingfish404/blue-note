@@ -1,0 +1,17 @@
+@import "./../common/style/index.css";
+
+.rate-container {
+    padding: 39.251rpx 32.609rpx;
+}
+
+.rate-container .stars-wrap {
+    margin-right: 6.643rpx;
+}
+
+.rate-container .stars-wrap .stars-item {
+    margin-right: 31.401rpx;
+}
+
+.tip-wrap {
+    font-size: var(--font-size-md, 32.609rpx);
+}

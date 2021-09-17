@@ -1,0 +1,15 @@
+<view class="rate-container vertical-align smt-rate-wrap">
+    <view class="stars-wrap vertical-align" bindtouchend="touchEnd">
+        <view class="stars-item smt-star-wrap" s-for="{{list}}">
+            <view s-if="{{customStar}}" data-index="{{index}}" bind:tap="changeStars">
+                <slot s-if="{{item.icon === 'star'}}" name="active-star"></slot>
+                <slot s-else-if="{{item.icon === 'star-half'}}" name="half-star"></slot>
+                <slot s-else name="sleep-star"></slot>
+            </view>
+            <smt-gov-icon s-else name="{{item.icon}}" size="{{starSize}}" color="{{item.color}}" data-index="{{index}}"
+                bind:tap="changeStars"></smt-gov-icon>
+        </view>
+    </view>
+    <view s-if="{{hasTipText}}" class="tip-wrap smt-tip-wrap" style="color: {{tipTextColor}}">
+        {{tipText || defaultTipText + '分'}}</view>
+</view>

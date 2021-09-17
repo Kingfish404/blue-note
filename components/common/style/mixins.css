@@ -1,0 +1,86 @@
+.smt-inline-flex-box {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smt-flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.smt-flex-column-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.smt-flex-center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smt-line-clamp-1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.smt-line-clamp-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.smt-hover-class:active {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+/* 下边框 */
+.smt-border-bottom-retain-inner,
+.smt-border-bottom-retain-outer {
+    position: relative;
+}
+
+.smt-border-bottom-retain-inner::after,
+.smt-border-bottom-retain-outer::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    transform-origin: 0 0;
+    background-color: #e6e6e6;
+    height: 1px;
+    transform: scaleY(.5);
+}
+
+.smt-border-bottom-retain-inner.android::after,
+.smt-border-bottom-retain-outer.android::after {
+    background-color: #f5f5f5;
+    transform: unset;
+}
+
+.smt-border-bottom-retain-inner.android-dark::after,
+.smt-border-bottom-retain-outer.android-dark::after {
+    background-color: #e6e6e6;
+    transform: unset;
+}
+
+.smt-border-bottom-retain-outer::after {
+    right: 0;
+    left: 0;
+}
+
+.smt-border-bottom-retain-inner::after {
+    right: 30.797rpx;
+    left: 30.797rpx;
+}

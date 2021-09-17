@@ -4,9 +4,7 @@
  */
 //
 
-import * as utils from '../../util/util'
-
-const app = getApp()
+// const app = getApp()
 
 Page({
     data: {
@@ -45,20 +43,21 @@ Page({
         // 设置日历
         var timestamp = Date.parse(new Date());
         var date = new Date(timestamp);
-        //获取年份  
-        var Y = date.getFullYear();
-        //获取月份  
-        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-        //获取当日日期 
+        var Y = date.getFullYear(); //获取年份
+        //获取月份
+        var M = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
+        //获取当日日期
         var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
         var t_currentDay = String(Y + '-' + M + '-' + D);
 
         // console.log(t_currentDay);
-
         let rangeP = [];
         for (let i = 2021; i <= Y; ++i) {
-            for (let j = 1;
-                (i < Y && j <= 12) || (j <= M); ++j) {
+            let max_m = 12;
+            if (i == Y) {
+                max_m = M;
+            }
+            for (let j = 1; j <= max_m; ++j) {
                 let month_name = String(i) + '-' + (j < 10 ? '0' + String(j) : String(j));
                 let month_value = new Array(30).fill(0).map((_, index) => {
                     return {
@@ -74,7 +73,9 @@ Page({
                 } else {
                     if (j == 2) {
                         month_value.pop();
-                        if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {} else {
+                        if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+                            continue;
+                        } else {
                             month_value.pop();
                         }
                     }
@@ -174,7 +175,7 @@ Page({
         swan.getStorage({
             key: 'states',
             success: res => {
-                console.log('get states:', this.data.states.haveLoc);
+                // console.log('get states:', this.data.states.haveLoc);
                 if (res.data.haveLoc) {
                     this.data.states.haveLoc = res.data.haveLoc;
                     this.setData({
@@ -196,7 +197,7 @@ Page({
                 })
             },
             fail: (res) => {
-                console.log(res)
+                // console.log(res)
             }
         });
     },
@@ -231,7 +232,7 @@ Page({
         this.nowState = 2;
     },
     //  更新日历
-    async updateDate() {
+    updateDate: function updateDate() {
         // 标记所有已经保存了的Note，修改range中的state为0
         for (var i = 0; i < this.data.rangeP.length; i++) {
 
@@ -278,7 +279,8 @@ Page({
                     }
                 });
             },
-            fail: err => {
+            // eslint-disable-next-line no-unused-vars
+            fail: (err) => {
                 swan.showToast({
                     title: '无位置权限，请手动开启'
                 });
@@ -336,8 +338,8 @@ Page({
             // 如果内容为空，则清楚储存并更新记录
             swan.removeStorage({
                 key: this.data.currentDate + '-Note',
-                success: res => {
-                    console.log(this.data.currentDate + '-Note', ' remove success');
+                success: () => {
+                    // console.log(this.data.currentDate + '-Note', ' remove success');
                 }
             });
             this.data.noteDateList.splice(this.data.noteDateList.indexOf(this.data.currentDate), 1);
@@ -432,14 +434,11 @@ Page({
             swan.getStorage({
                 key: this.data.currentDate + '-Note',
                 success: res => {
-                    console.log(date);
                     this.setData({
                         currentNoteValue: res.data
                     })
                 }
             });
-        } else {
-
         }
     },
 
@@ -476,7 +475,7 @@ Page({
     aboutUs() {
         swan.showModal({
             title: '关于我们',
-            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:1.0.0\r\ncopyright@2020\r\n反馈群：631586660',
+            content: 'Team from WUT\r\n开发：Kingfish404\r\n产品：小施小施不吃鱼籽\r\n特别鸣谢：shandianchengzi\r\n所有数据均保存在本地\r\nVersion:1.0.1\r\ncopyright@2020\r\n反馈群：631586660',
             showCancel: false,
             confirmText: '知道啦'
         });
@@ -484,7 +483,6 @@ Page({
 
     todayClick(e) {
         var value = e.currentTarget.dataset;
-        console.log(value);
         this.allDayClick(value);
     },
 
@@ -498,7 +496,6 @@ Page({
     allDayClick({
         value
     }) {
-        console.log(value);
         if (value.state) {
             this.setData({
                 allDayValue: value
@@ -507,8 +504,6 @@ Page({
         this.data.lastState = this.data.nowState;
 
         this.data.nowState = 0;
-
-        console.log('AllDayClick:', value['day']);
 
         if (this.data.noteDateList.indexOf(value['day']) != -1) {
             // 列表内已经存在当日日记

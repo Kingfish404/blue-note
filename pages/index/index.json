@@ -2,6 +2,6 @@
     "navigationBarTitleText": "小蓝便笺",
     "usingComponents": {
         "calendar": "/components/calendar/calendar",
-        "smt-rate": "@smt-ui/component/src/rate"
+        "smt-rate": "/components/rate/index"
     }
 }

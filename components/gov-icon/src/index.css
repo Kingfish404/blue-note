@@ -1,0 +1,14 @@
+.iconfont {
+    display: flex; /* inline-block vertical 对不齐 */
+    width: 36.232rpx;
+    height: 36.232rpx;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 90ms linear;
+}
+
+.iconfont.show {
+    opacity: 1;
+}

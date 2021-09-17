@@ -2,14 +2,13 @@
  * @file calendar.js
  * @author huangzilong (huangzilong@baidu.com)
  */
-import {
+const {
     getDay,
     getMonth
-} from './util';
+} = require('./util');
 
-Component({ // eslint-disable-line
+Component({
     properties: {
-        /* eslint-disable fecs-properties-quote */
 
         // 日历数组
         range: {
@@ -17,7 +16,9 @@ Component({ // eslint-disable-line
             value: [],
             observer(n) {
                 // 更新时自动校验日历状态
-                n && this.checkForbidVal();
+                if (n) {
+                    this.checkForbidVal();
+                }
             }
         },
 
@@ -65,11 +66,10 @@ Component({ // eslint-disable-line
             type: Boolean,
             value: true
         }
-        /* eslint-enable fecs-properties-quore */
     },
     observers: {
-        'range': function (e) {
-            console.log("update range and fmtedMonth - on calendar.js")
+        'range': function () {
+            // console.log("update range and fmtedMonth - on calendar.js")
             this.fmtedMonth();
         }
     },
@@ -121,7 +121,9 @@ Component({ // eslint-disable-line
                         ].join(separation),
                         day
                     };
-                    item && day++;
+                    if (item) {
+                        day++;
+                    }
                     r.push(item);
                 });
 
